@@ -1,0 +1,16 @@
+{
+  "name": "btc-usdc-option-fix-client",
+  "version": "1.0.0",
+  "description": "FIX API client to get BTC-USDC call option fees",
+  "main": "fix-client.js",
+  "scripts": {
+    "start": "node fix-client.js",
+    "test": "node test-quote.js"
+  },
+  "keywords": ["fix", "options", "bitcoin", "crypto"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
