@@ -133,7 +133,7 @@ class FIXClient {
     // Instrument group details
     body += `555=1${this.SOH}`; // NoLegs
     body += `600=N/A${this.SOH}`; // LegSymbol
-    body += `608=OPECCS${this.SOH}`; // CFICode: Options, Put/Call (C=Call), European, Cash settled, Standard
+    body += `608=OCECCS${this.SOH}`; // CFICode: Options, Call (C=Call), European, Cash settled, Standard
     body += `611=${maturityDate}${this.SOH}`; // MaturityDate (YYYYMMDD)
     body += `612=${strikePrice}${this.SOH}`; // StrikePrice
     body += `624=2${this.SOH}`; // LegSide: 2=Sell (writing/selling)
@@ -551,7 +551,7 @@ async function main() {
     // Request quote for BTC-USDC Call Option
     // Strike price: You need to determine the appropriate strike
     // Maturity: 2025-12-31
-    const strikePrice = process.env.STRIKE_PRICE || '150000'; // Example: $150,000 strike - adjust as needed
+    const strikePrice = process.env.STRIKE_PRICE || '100000'; // Example: $100,000 strike - adjust as needed
     const maturityDate = '20251231'; // YYYYMMDD format
     
     console.log(c.blue + '\n▶ Step 3: Requesting option quote...' + c.reset);
