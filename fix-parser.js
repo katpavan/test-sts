@@ -76,6 +76,7 @@ const SIDES = {
 
 // CFI Code breakdown
 const CFI_CODES = {
+  'OCECCN': 'Options, Call, European, Cash-settled, Non-standard',
   'OPECCS': 'Options, Call, European, Cash-settled, Standard',
   'OPEPCS': 'Options, Put, European, Cash-settled, Standard',
   'OPEACS': 'Options, Call, American, Cash-settled, Standard',

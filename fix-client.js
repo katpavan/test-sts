@@ -133,7 +133,7 @@ class FIXClient {
     // Instrument group details
     body += `555=1${this.SOH}`; // NoLegs
     body += `600=N/A${this.SOH}`; // LegSymbol
-    body += `608=OCECCS${this.SOH}`; // CFICode: Options, Call (C=Call), European, Cash settled, Standard
+    body += `608=OCECCN${this.SOH}`; // CFICode: Options, Call (C=Call), European, Cash settled, Non-standard
     body += `611=${maturityDate}${this.SOH}`; // MaturityDate (YYYYMMDD)
     body += `612=${strikePrice}${this.SOH}`; // StrikePrice
     body += `624=2${this.SOH}`; // LegSide: 2=Sell (writing/selling)

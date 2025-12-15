@@ -116,9 +116,9 @@ function buildQuoteRequest(options = {}, seqNum = 2) {
   // Default parameters - BTC-USDC Call Option Sell
   const strikePrice = options.strikePrice || 100000;
   const maturityDate = options.maturityDate || '20251231'; // Dec 31, 2025
-  const cfiCode = options.cfiCode || 'OCECCS'; // Call, European, Currency, Cash, Standardized
+  const cfiCode = options.cfiCode || 'OCECCN'; // Call, European, Currency, Cash, Non-standard
   const underlyingSymbol = options.underlyingSymbol || 'BTC-USDC';
-  const currency = options.currency || 'BTC';
+  const currency = options.currency || 'USDC';
   const side = options.side || '2'; // 1=Buy, 2=Sell (default to Sell)
   const legSide = options.legSide || side; // Usually same as side
   const legQty = options.legQty || '1'; // Notional amount
@@ -133,7 +133,7 @@ function buildQuoteRequest(options = {}, seqNum = 2) {
     `54=${side}`, // Side (1=Buy, 2=Sell)
     `15=${currency}`, // Currency
     `1=${config.account}`, // Account
-    `555=1`, // NoLegs
+    `555=USDC`, // NoLegs
     `600=N/A`, // LegSymbol
     `608=${cfiCode}`, // LegCFICode (Call option)
     `611=${maturityDate}`, // LegMaturityDate
